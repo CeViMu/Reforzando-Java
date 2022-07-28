@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        var hola = "Hola mundo"; //variable global
+        let hello = "Hello world";
+        console.log(hola);
+        console.log(hello);
+        console.log(window.hola);
+        console.log(window.hello);
+        //Ambito del bloque
+        console.log("**********var************")
+        var musica = "Rock"
+        console.log("Variable Música antes del bloque",musica);
+        //esto es un bloque
+        {
+            var musica = "Pop";
+            console.log("Variable Música antes del bloque",musica);
+        }
+        console.log("Variable Música antes del bloque",musica);
+
+        console.log("**********let************")
+        let musica2 = "Rock"
+        console.log("Variable Música antes del bloque",musica2);
+        //esto es un bloque
+        {
+            let musica2 = "Pop";
+            console.log("Variable Música antes del bloque",musica2);
+        }
+        console.log("Variable Música antes del bloque",musica2);
+
+        console.log("**********Constantes************")
+        const PI = 3.1416;
+        console.log(PI);
+
+        let objeto={
+            nombre:"Cecilia",
+            edad: 23
+        };
+        let colores=["blanco","amarillo","verde"];
+        console.log(objeto);
+        console.log(colores);
+
+        //Agregand algo a objeto
+        objeto.correo="cecy@gmail.com";
+        colores.push("azul");
+
+        console.log("**********String************");
+        let lorem = "      orem ui ne oejc. Escmkdemc kecmsc kcmkcm kcmdkmc . Hkcmes eki ke e jnv ke kwmcd. Los dknf   " 
+
+        console.log(
+            lorem.trim(), //quita los espacios en blanco que hay alrrededor del texto
+            lorem.split(" "),//convertir cadena a arreglo
+            lorem.split(".")
+        ); 
+       
+        console.log("**********concatenacion************")
+        let nombre= "Cecilia";
+        let apellido= "Muñoz";
+         let saludo = "Hola mi nombre es: " + nombre + " " + apellido + ".";
+        console.log(saludo);
+
+        console.log("**********interpolación de variables************")
+        let saludo2 = `Hola mi nombre es: ${nombre} ${apellido}.`;
+        console.log(saludo2);
+
+        let ul = " <ul><li>Primavera</li><li>Verano</li><li>invierno</li></ul>";
+        console.log(ul)
+
+        let ul2 = `<ul>
+            <li>Primavera</li>
+            <li>Verano</li>
+            <li>Invierno</li>
+        </ul>` //Estas son template strings
+        console.log(ul2);
+
+        console.log("***************Numbers********************");
+        let a =2;
+        let b = new Number(1);
+        let c = 8.12;
+        console.log(c.toFixed(1)); //cuantos decimales debe tener un valor numérico
+        console.log(parseInt(c)); //devuelve solo la parte entera
+        console.log(parseFloat(c)); //imprime la parte e ntera y flotante
+    </script>
+</body>
+</html>
