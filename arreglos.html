@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = [];
+        const b = [1, true, "Hola",["a","b","c",[1,2,3]]];
+        console.log(a);
+        console.log(b);
+        console.log(b[3][2]);
+        console.log(b[3][3][1]) /*Acceder al 1*/
+
+        const c = Array.of("x","y","z",8,7,8);/*Permite llenar un arreglo*/
+        console.log(c);
+        const d = Array(100).fill(false);/*llenar un arreglo con algo*/
+        console.log(d);
+
+        const e = new Array(); /*ya casi no se usa*/
+        console.log(e);
+
+        const f = new Array(1,2,3);
+        console.log(e);
+
+        const colores = ["Rojo", "Verde", "Azul"];
+        console.log(colores);
+        colores.push("Negro"); /*push pone el elemento al final*/
+        console.log(colores);
+        colores.pop();/*quita el ultimo elemento*/
+        console.log(colores);
+    </script>
+   
+
+</body>
+</html>
