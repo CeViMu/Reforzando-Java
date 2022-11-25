@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const b={} //este es un objeto
+        console.log(b);
+
+        const c = new Object(); //ya casi no se usa
+        console.log(c);
+
+        const cecy = {
+            nombre: "Cecilia",
+            apellido: "Chavez",
+            edad: 23,
+            pasatiempos: ["correr", "dar clases"],
+            soltero: false,
+            contacto:{
+                email: "cecy@gmail.com",
+                movil: "4442"
+            },
+            saludar: function(){
+                console.log("Hola");
+            },
+            decirMiNombre: function(){
+                console.log(`Hola me llamo ${this.nombre} y tengo ${this.edad} años y me puedes escribir a ${this.contacto.email}`); //este this se refiere al contexto, el mismo objeto 
+            }
+        }
+        console.log(cecy);
+        console.log(cecy["nombre"]); //opcion 1
+        console.log(cecy.nombre); //opcion 2
+        console.log(cecy.contacto.movil);
+        
+        cecy.decirMiNombre();
+
+        console.log(Object.keys(cecy)); //permite listar las llaves del objeto
+        console.log(Object.values(cecy));
+        console.log(cecy.hasOwnProperty("nombre"));//permite saber si un objeto tiene una propiedad
+    </script>
+</body>
+</html>
